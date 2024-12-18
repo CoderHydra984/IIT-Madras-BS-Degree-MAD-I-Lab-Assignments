@@ -1,0 +1,58 @@
+#body-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+#table-container {
+    border: 2px solid #0f1111;
+
+}
+
+.table {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: left;
+
+}
+
+.table th {
+    background-color: #202125;
+    color: whitesmoke;
+    height: 50px;
+    width: 100px;
+    padding: 8px;
+}
+.table td {
+    height: 30px;
+    padding: 8px;
+}
+
+
+.button {
+    margin: 5px;
+    padding: 6px;
+    border: 2px solid #202125;
+    border-radius: 5px;
+    text-decoration: none;
+    color: #202125;
+    background-color:white;
+    height: 36px;
+    width: 100px;
+    transition: background-color 0.3s ease, transform 0.1s ease
+}
+.button:hover {
+    background-color:   #18191C; /* Slightly darker background on hover */
+    color: white;
+}
+.button:active {
+    background-color: #121416; /* Even darker blue when clicked */
+    transform: scale(0.98); /* Slight shrink for click effect */
+}
+
+.add-student {
+    font-size: 18px;
+    transition: background-color 0.3s ease, transform 0.1s ease
+}
+

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Information</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+
+<body>
+    <h1 style="text-align:center">Student Details</h1>
+    <table id="personal-details" class="table">
+        <tr>
+            <th>Roll Number</th>
+            <th>First Name</th>
+            <th>Last Name</th>
+        </tr>
+        <tr>
+            <td>{{ Student_details.roll_number }}</td>
+            <td>{{ Student_details.first_name }}</td>
+            <td>{{ Student_details.last_name }}</td>
+        </tr>
+    </table>
+    <h1 style="text-align:center">Enrollment List</h1>
+    <table id="enroll-table" class="table">
+        <tr>
+            <th>S. No.</th>
+            <th>Course Code</th>
+            <th>Course Name</th>
+            <th>Course Description</th>
+        </tr>
+        {% for course in Student_details.courses %}
+        <tr>
+            <td>{{ loop.index }}</td>
+            <td>{{ course.course_code }}</td>
+            <td>{{ course.course_name }}</td>
+            <td>{{ course.course_description }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+    <br>
+    <a class="button" href="{{url_for('index')}}">Go back</a>
+</body>
+
+</html>

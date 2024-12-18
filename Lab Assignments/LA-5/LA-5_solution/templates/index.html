@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+
+<body>
+    <div id="body-container">
+        <div id="heading-container">
+            <h1>Students List</h1>
+        </div>
+        {% if not students %}
+            <div>
+                <p>No Student found.Add the Students now!</p>
+                <a href="/student/create">+ Add Student</a>
+            </div>
+        {% else %}
+            <div id="table-container">
+                <table id="all-students" class="table">
+                    <tr>
+                        <th>SNo</th>
+                        <th>Roll Number</th>
+                        <th>First Name</th>
+                        <th>Last Name</th>
+                        <th colspan="2">Actions</th>
+                    </tr>
+                    {% for stud_data in students %}
+                    <tr>
+                            <td>{{ loop.index }}</td>
+                            <td><a href="{{ url_for('student_info', student_id=stud_data.student_id)}}" class="button" title="Show {{stud_data.first_name}}'s enrollments" >{{ stud_data.roll_number }}</a></td>
+                            <td>{{ stud_data.first_name }}</td>
+                            <td>{{ stud_data.last_name }}</td>
+                            <td>
+                                <a href="{{ url_for('update', student_id=stud_data.student_id) }}" type="button" class="button">Update</a>
+                                <a href="{{ url_for('delete', student_id=stud_data.student_id) }}" type="button" class="button">Delete</a>
+                            </td>
+                    </tr>
+                    {% endfor %}
+                </table>
+            </div>
+            <br>
+            <div id="add-student">
+                <a href="/student/create" class="button" class="add-student">+ Add Student</a>
+            </div>
+        {% endif %}
+    </div>
+</body>
+
+</html>
