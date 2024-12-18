@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Student Data</title>
+</head>
+
+<body>
+    <table border="2" id="student-details-table">
+        <tr>
+            <th>Student Id</th>
+            <th>Course Id</th>
+            <th>Marks</th>
+        </tr>
+        {% for elem in my_data %}
+        <tr>
+            <td>{{student_id_data}}</td>
+            <td>{{elem[0]}}</td>
+            <td>{{elem[1]}}</td>
+        </tr>
+        {%endfor%}
+        <tr>
+            <td colspan="2" style="text-align:center"> Total Marks </td>
+            <td>{{total_marks_data}}</td>
+        </tr>
+    </table>
+    <a href="/">Go back</a>
+</body>
+
+
+</html>
