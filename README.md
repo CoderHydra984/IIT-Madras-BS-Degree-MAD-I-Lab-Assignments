@@ -4,7 +4,7 @@ Welcome to my repository! Here, I share my solutions to the **Modern Application
 
 ## About the Course
 
-Modern Application Development-I (MAD-I) is a foundational course in application development, covering key concepts such as:
+Modern Application Development-I (MAD-I) is a diploma level course in application development, covering key concepts such as:
 
 - Basics of web technologies
 - Backend development using Python and Flask
@@ -41,17 +41,17 @@ The repository is organized as follows:
 
 1. Clone this repository:
    ```bash
-   git clone https://github.com/your-username/IIT-Madras-MAD1-Lab-Assignments.git
+	https://github.com/CoderHydra984/IIT-Madras-BS-Degree-MAD-I-Lab-Assignments.git
    ```
 
 2. Navigate to the desired assignment folder and explore the solutions.
 
-3. Each solution is implemented in Python. To execute the code:
+3. Each solution has passed all the public and private test cases. To execute the code:
    - Ensure you have Python 3.12.3 installed.
    - Install the required dependencies (if any) using `pip install -r requirements.txt` (if provided).
    - Run the script using:
      ```bash
-     python problem1_solution.py
+     python app.py
      ```
 
 ---
@@ -73,7 +73,7 @@ pip install flask sqlalchemy
 
 ## Disclaimer
 
-These solutions are intended for educational purposes only. Please do not copy and submit these solutions directly for your assignments. Use them as a reference to enhance your understanding and write your own solutions.
+**These solutions are intended for educational purposes only. Please do not copy and submit these solutions directly for your assignments. Use them as a reference to enhance your understanding and write your own solutions.**
 
 ---
 
